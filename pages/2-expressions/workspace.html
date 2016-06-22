@@ -46,6 +46,13 @@
                         <!-- Inicio del contenido HTML -->
 
                         <h1>Workspace</h1>
+                        <div ng-app="myApp">
+                            <div ng-controller="myCtrl">
+                                Ejemplo de expresion: {{ test }} <br>
+
+                                Ejemplo de expresion con model: <input type="text" ng-model="test">
+                            </div>
+                        </div>
 
                         <!-- Final del contenido HTML -->
                     </div>
@@ -62,5 +69,11 @@
             </div>
         </div>
         <script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+        <script type="text/javascript">
+            var app = angular.module('myApp',[]);
+            app.controller('myCtrl', function($scope){
+                $scope.test = 'tests';
+            });
+        </script>
     </body>
 </html>
