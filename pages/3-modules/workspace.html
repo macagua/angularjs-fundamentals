@@ -46,6 +46,14 @@
                         <!-- Inicio del contenido HTML -->
 
                         <h1>Workspace</h1>
+                        <div ng-app="myApp" ng-controller="myCtrl">
+                            <p>Nombres: {{firstName}}</p>
+                            <p>Apellidos: {{lastName}}</p><br>
+                            <label>Valor X</label> <input type="number" ng-model="x"><br>
+                            <label>Valor Y</label> <input type="number" ng-model="y"><br>
+                            Total con expresiones: <b>{{ x + y }}</b>.<br>
+                            Total con variable: <b>{{ sum() }}</b>.<br>
+                        </div>
 
                         <!-- Final del contenido HTML -->
                     </div>
@@ -63,6 +71,7 @@
         </div>
         <script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
         <!-- Inicio del contenido javascript -->
+        <script type="text/javascript" src="./app/app-final.js"></script>
         <script>
 
 
